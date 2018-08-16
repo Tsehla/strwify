@@ -10,8 +10,7 @@
             }
         </style>
         <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap.min.css">
     </head>
     <body>
     <!-- navi -->
@@ -33,13 +32,13 @@
                 text-align :center;
                 line-height: 7.5vh;
             }
-            {border: 1px solid}
+           {border: 1px solid}
         
         </style>
     <!-- search -->
         <div id='navi_container'>
             <input type='search' placeholder='Search Google or type URL' class='form-control'>
-            <button onclick='' class='btn btn'><i class='fa fa-search'></i></button>
+            <button onclick='' class='btn btn'>	&#8981;</button>
         </div>
         <style>
             #navi_container {
@@ -69,9 +68,7 @@
         
     <!-- top arrow -->
         <div id='top_arrow_container'>
-            <div id='top_arrow_1' class='glyphicon glyphicon-menu-up'></div>
-            <div id='top_arrow_2' class='glyphicon glyphicon-menu-up'></div>
-             <div id='top_arrow_3' class='glyphicon glyphicon-menu-up'></div>
+            <div id='top_arrow_1'>&#8679;</div>
         </div>
         <style>
             #top_arrow_container{
@@ -87,31 +84,20 @@
                 padding: 0px;
             }
             #top_arrow_container div:nth-child(1) {
-                font-size: 1em;
-                height: Calc(100%/5);
+                font-size: 3em;
+                height: Calc(100%/1);
             }            
-            #top_arrow_container div:nth-child(2) {
-                font-size: 1.5em;
-                height: Calc(100%/4);
-            }            
-            #top_arrow_container div:nth-child(3) {
-                font-size: 30px;
-                height: Calc(100%/3);
-            }
+           
         
         </style>
         
     <!-- arrow center -->
         <div id='center_arrow_container'>
             <div id='left_arrow'>
-                <div id='top_arrow_1' class='glyphicon glyphicon-menu-left'></div>
-                <div id='top_arrow_2' class='glyphicon glyphicon-menu-left'></div>
-                <div id='top_arrow_3' class='glyphicon glyphicon-menu-left'></div>
+                <div id='top_arrow_1'>&#8678;</div>
             </div>
             <div id='right_arrow'>
-                <div id='top_arrow_1' class='glyphicon glyphicon-menu-right'></div>
-                <div id='top_arrow_2' class='glyphicon glyphicon-menu-right'></div>
-                <div id='top_arrow_3' class='glyphicon glyphicon-menu-right'></div>
+                <div id='top_arrow_1'>&#8680;</div>
             </div>
         </div>
             
@@ -134,18 +120,10 @@
                     line-height: 18vh;
                 }
                 #left_arrow div:nth-child(1){
-                    width:4px;/* width made to give intent virtual appearnce */
+                    width:100%;
                     padding-left: 10vw;
-                    font-size: 2em;
-                }                
-                #left_arrow div:nth-child(2){
-                    width: 5px;
                     font-size: 3em;
-                }                
-                #left_arrow div:nth-child(3){
-                    width: 40px;
-                    font-size: 4em;
-                }
+                } 
                 /* right arrow */
                 #right_arrow {
                     width: 50vw;
@@ -157,27 +135,16 @@
                     line-height: 18vh;
                     float: right;
                 }
-                #right_arrow div:nth-child(3){
-                    width: 23px;/* width made to give intent virtual appearnce */
-                    
-                    font-size: 4em;
-                }                
-                #right_arrow div:nth-child(2){
-                    width: 20px;
-                    font-size: 3em;
-                }                
                 #right_arrow div:nth-child(1){
-                    width: 23px;
-                    font-size: 2em;
-                    margin-right: 10vw;
-                }   
+                    width:100%;
+                    padding-left: 30vw;
+                    font-size: 3em;
+                }
             </style>
             
             <!-- down arrow -->
              <div id='down_arrow_container'>
-                <div id='top_arrow_1' class='glyphicon glyphicon-menu-down'></div>
-                <div id='top_arrow_2' class='glyphicon glyphicon-menu-down'></div>
-                <div id='top_arrow_3' class='glyphicon glyphicon-menu-down'></div>
+                <div id='top_arrow_1'>&#8681;</div>
             </div>
             <style>
                 #down_arrow_container{
@@ -193,17 +160,9 @@
                     padding: 0px;
                 }
                 #down_arrow_container div:nth-child(1) {
-                    font-size: 30px;
-                    height: Calc(100%/2);
-                }            
-                #down_arrow_container div:nth-child(2) {
-                    font-size: 1.5em;
-                    height: Calc(100%/3);
-                }            
-                #down_arrow_container div:nth-child(3) {
-                    font-size: 1em;
-                    height: Calc(100%/4);
-                }
+                    font-size: 3em;
+                    height: Calc(100%/1);
+                } 
         
             </style>
             

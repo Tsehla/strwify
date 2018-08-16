@@ -12,12 +12,12 @@
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" href="bootstrap.min.css">
     </head>
-    <body>
+    <body id='page_body'>
     <!-- navi -->
-        <div id='nav_container'>
-            <a href='#' class='btn btn-primary' role='button' style='margin-left: 20vw; border-bottom-right-radius:0px;border-top-right-radius:0px; '>Balance</a>
-            <a href='#' class='btn btn-info' role='button' style='border-bottom-right-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-top-left-radius:0px'>HELP</a>
-            <a href='#' class='btn btn-primary' role='button' style='border-bottom-left-radius:0px;border-top-left-radius:0px'>LogIn</a>
+        <div id='nav_container'> <!-- chnage href with you link -->
+            <a href='http://streetwifiy.co.za/status' class='btn btn-primary' role='button' style='margin-left: 20vw; border-bottom-right-radius:0px;border-top-right-radius:0px; '>Balance</a>
+            <button class='btn btn-info' style='border-bottom-right-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-top-left-radius:0px' onclick='help()'>HELP</button>
+            <a href='http://streetwifiy.co.za/logout' class='btn btn-primary' role='button' style='border-bottom-left-radius:0px;border-top-left-radius:0px'>LogOut</a>
         </div>
         <style>
             #nav_container{
@@ -32,13 +32,20 @@
                 text-align :center;
                 line-height: 7.5vh;
             }
+            #nav_container button{
+                width: 20vw;
+                height: 10vh;
+                text-align :center;
+                line-height: 7.5vh;
+            }
+            
            {border: 1px solid}
         
         </style>
     <!-- search -->
         <div id='navi_container'>
-            <input type='search' placeholder='Search Google or type URL' class='form-control'>
-            <button onclick='' class='btn btn'>	&#8981;</button>
+            <input type='search' placeholder='Search Google or type URL' class='form-control' id='search'>
+            <button onclick='search()' class='btn btn'>	&#8981;</button>
         </div>
         <style>
             #navi_container {
@@ -165,12 +172,59 @@
                 } 
         
             </style>
-            
-            
+    <!-- wallpaper links -->
+        
+        <div id='walp_links_container'>
+            <p><a>no data yet</a></p>
+        </div>
+        <style>
+            #walp_links_container {
+                margin-top: 7vh;
+                width: 100vw;
+                height: 15vh;
+                background: rgba(192,192,192,0.2);
+                text-align: center;
+
+                overflow: auto;
+            }
+            #walp_links_container p{
+                width: 100%;
+                height: auto;
+                padding: 5vh 1vw 1vh 1vw;
+                background-color: transparent;
+                color: black;
+            }
+        </style>
+        
         
     
     
-        <script type="text/javascript" src="index.js">
+        <script type="text/javascript">
+            
+            //search button
+            //https://www.google.com/search?q=
+            let search_string = document.getElementById('search');
+            function search(){
+                
+                window.open('https://www.google.com/search?q='+search_string.value, '_self');
+            }
+            
+            //help function
+            function help(){
+                alert(`+++++++++++++++++++++\n                     HELP    \n+++++++++++++++++++++\n1) Open browser\n2) goto STREETWIFIY.CO.ZA\n3) Click 'CONNECT'\n4) Enter VOUCHER code\n`);
+            }
+            
+            
+            
+            
+            
+           //hide page on other links;
+            //may re-implement this feauture in the future
+            let status_page = document.location.pathname;
+            if(status_page == 'status' || status_page == 'logout'){
+                document.getElementById('page_body').style.display='none';
+            }
+            
         </script>
     </body>
 

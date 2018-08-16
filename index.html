@@ -1,10 +1,218 @@
+<!DOCTYPE html lan:EN>
 <html>
-<head></head>
-<body>
+    <head>
+        <style type="text/css">
+            body {
+                width: 100vw;
+                height: 100vh;
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    </head>
+    <body>
+    <!-- navi -->
+        <div id='nav_container'>
+            <a href='#' class='btn btn-primary' role='button' style='margin-left: 20vw; border-bottom-right-radius:0px;border-top-right-radius:0px; '>Balance</a>
+            <a href='#' class='btn btn-info' role='button' style='border-bottom-right-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-top-left-radius:0px'>HELP</a>
+            <a href='#' class='btn btn-primary' role='button' style='border-bottom-left-radius:0px;border-top-left-radius:0px'>LogIn</a>
+        </div>
+        <style>
+            #nav_container{
+                width: 100vw;
+                height: 10vh;
+                display: flex;
+            
+            }
+            #nav_container a{
+                width: 20vw;
+                height: 10vh;
+                text-align :center;
+                line-height: 7.5vh;
+            }
+            {border: 1px solid}
+        
+        </style>
+    <!-- search -->
+        <div id='navi_container'>
+            <input type='search' placeholder='Search Google or type URL' class='form-control'>
+            <button onclick='' class='btn btn'><i class='fa fa-search'></i></button>
+        </div>
+        <style>
+            #navi_container {
+                width: 100vw;
+                height: 10vh;
+                display: flex;
+            }
+            #navi_container input {
+                width: 70vw;
+                height: 80%;
+                margin: 2% 2% 2% 4%;
+                
+                text-align: center;
+            }
+            #navi_container button {
+                width: 20%;
+                height: 98%;
+                margin-top: 1%;
+                background-color: rebeccapurple;
+                color: snow;
+            }
+            #navi_container button:active{
+                background-color:black;
+            }
+            
+        </style>
+        
+    <!-- top arrow -->
+        <div id='top_arrow_container'>
+            <div id='top_arrow_1' class='glyphicon glyphicon-menu-up'></div>
+            <div id='top_arrow_2' class='glyphicon glyphicon-menu-up'></div>
+             <div id='top_arrow_3' class='glyphicon glyphicon-menu-up'></div>
+        </div>
+        <style>
+            #top_arrow_container{
+                width: 100vw;
+                height: 11vh;
+                margin-top: 4%;
+                text-align: center;
+                
+            }
+            #top_arrow_container div{
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+            #top_arrow_container div:nth-child(1) {
+                font-size: 1em;
+                height: Calc(100%/5);
+            }            
+            #top_arrow_container div:nth-child(2) {
+                font-size: 1.5em;
+                height: Calc(100%/4);
+            }            
+            #top_arrow_container div:nth-child(3) {
+                font-size: 30px;
+                height: Calc(100%/3);
+            }
+        
+        </style>
+        
+    <!-- arrow center -->
+        <div id='center_arrow_container'>
+            <div id='left_arrow'>
+                <div id='top_arrow_1' class='glyphicon glyphicon-menu-left'></div>
+                <div id='top_arrow_2' class='glyphicon glyphicon-menu-left'></div>
+                <div id='top_arrow_3' class='glyphicon glyphicon-menu-left'></div>
+            </div>
+            <div id='right_arrow'>
+                <div id='top_arrow_1' class='glyphicon glyphicon-menu-right'></div>
+                <div id='top_arrow_2' class='glyphicon glyphicon-menu-right'></div>
+                <div id='top_arrow_3' class='glyphicon glyphicon-menu-right'></div>
+            </div>
+        </div>
+            
+            <style>
+                #center_arrow_container {
+                    width: 100vw;
+                    height: 20vh;
+                    margin: 1vh 0px 0px 0px;
+                    padding: 0px;
+                    display: flex;
+                }
+                /* left arrow */
+                #left_arrow {
+                    width: 50vw;
+                    height: 100%;
+                }
+                #left_arrow div{
+                    height: 100%;
+                    vertical-align: middle;
+                    line-height: 18vh;
+                }
+                #left_arrow div:nth-child(1){
+                    width:4px;/* width made to give intent virtual appearnce */
+                    padding-left: 10vw;
+                    font-size: 2em;
+                }                
+                #left_arrow div:nth-child(2){
+                    width: 5px;
+                    font-size: 3em;
+                }                
+                #left_arrow div:nth-child(3){
+                    width: 40px;
+                    font-size: 4em;
+                }
+                /* right arrow */
+                #right_arrow {
+                    width: 50vw;
+                    height: 100%;
+                }
+                #right_arrow div{
+                    height: 100%;
+                    vertical-align: middle;
+                    line-height: 18vh;
+                    float: right;
+                }
+                #right_arrow div:nth-child(3){
+                    width: 23px;/* width made to give intent virtual appearnce */
+                    
+                    font-size: 4em;
+                }                
+                #right_arrow div:nth-child(2){
+                    width: 20px;
+                    font-size: 3em;
+                }                
+                #right_arrow div:nth-child(1){
+                    width: 23px;
+                    font-size: 2em;
+                    margin-right: 10vw;
+                }   
+            </style>
+            
+            <!-- down arrow -->
+             <div id='down_arrow_container'>
+                <div id='top_arrow_1' class='glyphicon glyphicon-menu-down'></div>
+                <div id='top_arrow_2' class='glyphicon glyphicon-menu-down'></div>
+                <div id='top_arrow_3' class='glyphicon glyphicon-menu-down'></div>
+            </div>
+            <style>
+                #down_arrow_container{
+                    width: 100vw;
+                    height: 11vh;
+                    margin-top: 1%;
+                    text-align: center;
+                
+                }
+                #down_arrow_container div{
+                    width: 100%;
+                    margin: 0px;
+                    padding: 0px;
+                }
+                #down_arrow_container div:nth-child(1) {
+                    font-size: 30px;
+                    height: Calc(100%/2);
+                }            
+                #down_arrow_container div:nth-child(2) {
+                    font-size: 1.5em;
+                    height: Calc(100%/3);
+                }            
+                #down_arrow_container div:nth-child(3) {
+                    font-size: 1em;
+                    height: Calc(100%/4);
+                }
+        
+            </style>
+            
+            
+        
+    
+    
+        <script type="text/javascript" src="index.js">
+        </script>
+    </body>
 
-<h1>Page underConstruction</h1>
-
-
-
-</body>
 </html>

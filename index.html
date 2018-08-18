@@ -7,7 +7,9 @@
                 height: 100vh;
                 margin: 0px;
                 padding: 0px;
+                font-size : 12px;
             }
+
         </style>
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" href="bootstrap.min.css">
@@ -31,12 +33,14 @@
                 height: 10vh;
                 text-align :center;
                 line-height: 7.5vh;
+                font-size: 20px;
             }
             #nav_container button{
                 width: 20vw;
                 height: 10vh;
                 text-align :center;
-                line-height: 7.5vh;
+                line-height: 6.5vh;
+                font-size: 20px;
             }
             
            {border: 1px solid}
@@ -60,12 +64,19 @@
                 
                 text-align: center;
             }
+            #navi_container input::placeholder {
+                 font-size: 20px;
+            
+            }
             #navi_container button {
                 width: 20%;
                 height: 98%;
                 margin-top: 1%;
                 background-color: rebeccapurple;
                 color: snow;
+                font-size: 60px;
+                vertical-align: middle;
+                line-height: 1vh;
             }
             #navi_container button:active{
                 background-color:black;
@@ -74,25 +85,31 @@
         </style>
         
     <!-- top arrow -->
-        <div id='top_arrow_container'>
-            <div id='top_arrow_1'>&#8679;</div>
+        <div id='top_arrow_container' >
+            <div id='top_arrow_1' role="button" class='btn btn-default'>&#8679;</div>
         </div>
         <style>
             #top_arrow_container{
                 width: 100vw;
                 height: 11vh;
                 margin-top: 4%;
+                margin-top: 4%;
                 text-align: center;
                 
             }
+    
             #top_arrow_container div{
                 width: 100%;
                 margin: 0px;
                 padding: 0px;
             }
             #top_arrow_container div:nth-child(1) {
-                font-size: 3em;
+                font-size: 4em;
                 height: Calc(100%/1);
+                color: blue;
+                border: 0px;
+                background-color: transparent;
+                
             }            
            
         
@@ -101,10 +118,10 @@
     <!-- arrow center -->
         <div id='center_arrow_container'>
             <div id='left_arrow'>
-                <div id='top_arrow_1'>&#8678;</div>
+                <div id='top_arrow_1' role="button" class='btn btn-default'>&#8678;</div>
             </div>
             <div id='right_arrow'>
-                <div id='top_arrow_1'>&#8680;</div>
+                <div id='top_arrow_1' role="button" class='btn btn-default'>&#8680;</div>
             </div>
         </div>
             
@@ -115,12 +132,14 @@
                     margin: 1vh 0px 0px 0px;
                     padding: 0px;
                     display: flex;
+                    text-align: center;
                 }
                 /* left arrow */
                 #left_arrow {
                     width: 50vw;
                     height: 100%;
                 }
+
                 #left_arrow div{
                     height: 100%;
                     vertical-align: middle;
@@ -128,13 +147,20 @@
                 }
                 #left_arrow div:nth-child(1){
                     width:100%;
-                    padding-left: 10vw;
-                    font-size: 3em;
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 4em;
+                    color : orange;
+                    border: 0px;
+                    background-color: transparent;
                 } 
                 /* right arrow */
                 #right_arrow {
                     width: 50vw;
                     height: 100%;
+                }
+                #right_arrow div:active {
+                background-color :grey;
                 }
                 #right_arrow div{
                     height: 100%;
@@ -144,14 +170,18 @@
                 }
                 #right_arrow div:nth-child(1){
                     width:100%;
-                    padding-left: 30vw;
-                    font-size: 3em;
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 4em;
+                    color: orange;
+                    border: 0px;
+                    background-color: transparent;
                 }
             </style>
             
             <!-- down arrow -->
              <div id='down_arrow_container'>
-                <div id='top_arrow_1'>&#8681;</div>
+                <div id='top_arrow_1' role="button" class='btn btn-default'>&#8681;</div>
             </div>
             <style>
                 #down_arrow_container{
@@ -161,30 +191,39 @@
                     text-align: center;
                 
                 }
+                #down_arrow_container div:active {
+                background-color :grey;
+                }
                 #down_arrow_container div{
                     width: 100%;
                     margin: 0px;
                     padding: 0px;
                 }
                 #down_arrow_container div:nth-child(1) {
-                    font-size: 3em;
+                    font-size: 4em;
                     height: Calc(100%/1);
+                    color : green;
+                    border: 0px;
+                    background-color: transparent;
                 } 
         
             </style>
     <!-- wallpaper links -->
         
-        <div id='walp_links_container'>
-            <p><a>no data yet</a></p>
+        <div id='walp_links_container' role='button' class='btn btn-primary'>
+            <p id='walp_links' >no data yet</p>
         </div>
+        <script>
+         document.getElementById('walp_links_container').onclick=function (){alert(document.getElementById('walp_links').textContent);}
+        </script>
         <style>
             #walp_links_container {
                 margin-top: 7vh;
                 width: 100vw;
                 height: 15vh;
+                border: 0px;
                 background: rgba(192,192,192,0.2);
                 text-align: center;
-
                 overflow: auto;
             }
             #walp_links_container p{
@@ -193,11 +232,135 @@
                 padding: 5vh 1vw 1vh 1vw;
                 background-color: transparent;
                 color: black;
+                font-size: 20px;
+                color: blue;
             }
         </style>
-        
-        
-    
+ <!-- free web modal -->
+       <div id='free_sites_container'>
+            <h1>FREE WEBSITES</h1>
+            <button onclick='free_sites_close()' class='btn btn-danger'>x</button>
+            <div id='education'>
+                <h2> EDUCATION</h2>
+                <a>edu1</a>
+                <a>edu2</a>
+                <a>edu3</a>
+            </div>
+            <div id='work'>
+                <h2>JOBS</h2>
+                <a>job1</a>
+                <a>job2</a>
+                <a>job3</a>
+            </div>
+       <Marquee role='marquee'>Pass it on, unconditionally help a stranger, a friend, a family member</Marquee>
+       </div>
+        <style>
+           #free_sites_container {
+                position: fixed;
+               display: none;
+                top : 3vh;
+                left :7vw;
+                width : 85vw;
+                height : 70vh;
+                background-color : white;
+                box-shadow: 3px 3px 2px grey, -3px -3px 2px grey;
+                overflow-y: auto;
+                overflow-x: hidden;
+              
+           }
+           #free_sites_container h1 {
+                width: 85vw;
+                height: 10vh;
+                margin-top: 0px;
+                text-align: center;
+                font-size: 3em;
+                border-bottom:1px solid brown;
+                padding : 0px;
+                vertical-align: middle;
+                line-height: 10vh;
+              
+           }
+           #free_sites_container button {
+                position: absolute;
+                width : 10vw;
+                height: 10vh;
+                top: 0px;
+                right: 0px;
+                display : inline;
+                float: right;
+                font-size: 3em;
+                vertical-align: middle;
+                line-height: 1vh;
+           }
+           #education {
+                width: 85vw;
+                height: auto;
+                margin: 3vh 0px 0px 0px;
+                padding : 0px;
+               border-bottom:1px solid brown;
+           }
+           #education h2 {
+                width :100;
+                height: 2.5vh;
+                margin: 0px;
+                font-size: 2em;
+                padding:0px;
+                vertical-align: middle;
+                line-height : 2.5vh;
+           }
+           #education a {
+                width: 100vw;
+                height: 3vh;
+                margin : 15px 0px 26px 10%;
+                display:block;
+                font-size: 2em;
+                color : blue;
+           }
+           #education a:active {
+                color: green;
+           }
+           #education a:visited{
+                color: black;
+           }
+           #work {
+                width: 85vw;
+                height: auto;
+                margin: 20px 0px 20px 0px;
+                padding : 0px;
+                
+           }
+           #work h2 {
+                width :100;
+                height: 2.5vh;
+                margin: 0px;
+                font-size: 2em;
+                padding:0px;
+                vertical-align: middle;
+                line-height : 2.5vh;
+           }
+           #work a {
+                width: 100vw;
+                height: 3vh;
+                margin : 15px 0px 26px 10%;
+                display:block;
+                font-size: 2em;
+                color : blue;
+           }
+           #work a:active {
+                color: green;
+           }
+           #work a:visited{
+                color: black;
+           }
+           #free_sites_container marquee {
+                width: 85vw;
+                height: 10vh;
+                font-size: 3em;
+                position: static;
+          
+           }
+        </style>
+   
     
         <script type="text/javascript">
             
@@ -215,15 +378,13 @@
             }
             
             
+            //free sites
             
-            
-            
-           //hide page on other links;
-            //may re-implement this feauture in the future
-            let status_page = document.location.pathname;
-            if(status_page == 'status' || status_page == 'logout'){
-                document.getElementById('page_body').style.display='none';
+           function free_sites_close(){ document.getElementById('free_sites_container').style.display='none';
             }
+            
+         document.getElementById('top_arrow_1').onclick=function(){  document.getElementById('free_sites_container').style.display='block';
+         }
             
         </script>
     </body>

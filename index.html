@@ -108,6 +108,7 @@
                 color: blue;
                 border: 0px;
                 background-color: transparent;
+                text-shadow : 2px 2px 1px snow;
                 
             }            
            
@@ -117,10 +118,10 @@
     <!-- arrow center -->
         <div id='center_arrow_container'>
             <div id='left_arrow'>
-                <div id='top_arrow_1' role="button" class='btn btn-default'>&#8678;</div>
+                <div id='left_arrow_1' role="button" class='btn btn-default'>&#8678;</div>
             </div>
             <div id='right_arrow'>
-                <div id='top_arrow_1' role="button" class='btn btn-default'>&#8680;</div>
+                <div id='right_arrow_1' role="button" class='btn btn-default'>&#8680;</div>
             </div>
         </div>
             
@@ -152,6 +153,7 @@
                     color : orange;
                     border: 0px;
                     background-color: transparent;
+                    text-shadow : 2px 2px 1px snow;
                 } 
                 /* right arrow */
                 #right_arrow {
@@ -175,6 +177,7 @@
                     color: orange;
                     border: 0px;
                     background-color: transparent;
+                    text-shadow : 2px 2px 1px snow;
                 }
             </style>
             
@@ -204,6 +207,7 @@
                     color : green;
                     border: 0px;
                     background-color: transparent;
+                    text-shadow : 2px 2px 1px snow;
                 } 
         
             </style>
@@ -213,6 +217,61 @@
             <p id='walp_links' >no data yet</p>
         </div>
         <script>
+        
+        //wallpaper changer
+        //wallpaper description
+        
+        var current_image = 2;
+        
+        var wall_description ={//walp descriptions
+        'walp_1' : "description 1"
+        , 'walp_2' : " description 2"
+        , 'walp_3'  :" description 3"
+        , 'walp_4'  : " description 4"
+        , 'walp_5' : " description 5"
+        , 'walp_6' : " description 6"
+        , 'walp_7' : " description 7"
+        , 'walp_8' : " description 8"
+        , 'walp_9' : " description 9"
+        , 'walp_10' : " description 10"
+        
+        };
+        document.getElementById('walp_links').innerHTML = wall_description['walp_1']; 
+        
+        function walp_changer(){//slideshow
+        
+        document.getElementById('page_body').style.backgroundImage = 'url("slide_images/'+current_image+'.jpg")';
+        
+        document.getElementById('walp_links').innerHTML = wall_description['walp_'+current_image];
+        //alert(current_image);
+        current_image= current_image+1;
+        if(current_image > 10 ){
+        current_image = 1;
+        }
+        
+        };
+        
+        
+        var walp_interval =  setInterval(walp_changer, 6000);
+        
+        //manual change
+        
+        document.getElementById('right_arrow_1').onclick = function (){
+        clearInterval(walp_interval);
+        walp_changer();
+        }
+        
+        document.getElementById('left_arrow_1').onclick = function (){
+        clearInterval(walp_interval);
+        current_image = current_image - 2;
+        if(current_image < 1){
+        current_image = 10;
+        }
+        walp_changer();
+        
+        } 
+        
+        
          document.getElementById('walp_links_container').onclick=function (){alert(document.getElementById('walp_links').textContent);}
         </script>
         <style>
@@ -230,9 +289,9 @@
                 height: auto;
                 padding: 5vh 1vw 1vh 1vw;
                 background-color: transparent;
-                color: black;
+                color: snow;
                 font-size: 20px;
-                color: blue;
+                text-shadow : 1px 1px 12px black;
             }
         </style>
         
@@ -593,8 +652,15 @@
                 position: static;
           
            }
+           /*body*/
+           body {
+           background-image: url('slide_images/1.jpg');
+           background-size: contain;
+           background-repeat : no-repeat;
+           background-position : center;
+           }
         </style>
-   
+            
     
         <script type="text/javascript">
             

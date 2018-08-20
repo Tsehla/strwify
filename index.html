@@ -1,7 +1,7 @@
 <!DOCTYPE html lan:EN>
 <html>
     <head>
-    <meta name='viewport' content="width='device-width, initial-scale='1'">
+    <meta name='viewport' content="width=device-width, initial-scale=1">
         <style type="text/css">
             body {
                 width: 100vw;
@@ -658,7 +658,7 @@
            /*body*/
            body {
            background-image: url('slide_images/1.jpg');
-           background-size: contain;
+           background-size: 100% 100%;
            background-repeat : no-repeat;
            background-position : center;
            }
@@ -707,15 +707,48 @@
          height : 90vh;
          
          }
-         #notification_container {
-         
-         }
+
            
          }
+
          
          </style>
         <script type="text/javascript">
             
             //search button
             //https://www.google.com/search?q=
-            let search_string = document.get
+            let search_string = document.getElementById('search');
+            function search(){
+                
+                window.open('https://www.google.com/search?q='+search_string.value);
+            }
+            
+            //help function
+          
+            
+            
+            //free sites
+            
+           function free_sites_close(){ document.getElementById('free_sites_container').style.display='none';
+            }
+            
+         document.getElementById('top_arrow_1').onclick=function(){  document.getElementById('free_sites_container').style.display='block';
+         }  
+         
+         function notification_close(){ document.getElementById('notification_container').style.display='none';
+            }
+            
+         document.getElementById('down_arrow_1').onclick=function(){  document.getElementById('notification_container').style.display='block';
+         }         
+         
+         function help(){ document.getElementById('help_container').style.display='block';
+            }
+        function help_close(){ document.getElementById('help_container').style.display='none';
+            }
+            
+       
+            
+        </script>
+    </body>
+
+</html>

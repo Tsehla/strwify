@@ -1,6 +1,7 @@
 <!DOCTYPE html lan:EN>
 <html>
     <head>
+    <meta name='viewport' content="width='device-width, initial-scale='1'">
         <style type="text/css">
             body {
                 width: 100vw;
@@ -9,6 +10,7 @@
                 padding: 0px;
                 font-size : 12px;
             }
+            
 
         </style>
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -209,7 +211,8 @@
                     background-color: transparent;
                     text-shadow : 2px 2px 1px snow;
                 } 
-        
+                
+                
             </style>
     <!-- wallpaper links -->
         
@@ -661,43 +664,58 @@
            }
         </style>
             
-    
+         <style type="text/css">
+         /*media queries*/
+         @media only screen and (max-height: 450px){
+         body {
+         height : 150vh;
+         }
+         #nav_container{
+         height: 15vh;
+         }
+         #nav_container a{
+         height: 15vh;
+         }
+         #nav_container button{
+         height: 15vh;
+         }
+         
+         /*input*/
+         #navi_container {
+         height: 15vh;
+         }
+         
+         /*arrow*/
+         #top_arrow_container{
+         height: 16vh;
+         }
+         #center_arrow_container {
+         height: 25vh;
+         }
+         #down_arrow_container{
+         height: 16vh;
+         }
+         #walp_links_container {
+         margin-top: 10vh;
+         height: 20vh;
+         }
+         #walp_links_container p{
+         padding: 5vh 1vw 1vh 1vw;
+         }
+          /* modal boxes */
+         #free_sites_container {
+         height : 90vh;
+         
+         }
+         #notification_container {
+         
+         }
+           
+         }
+         
+         </style>
         <script type="text/javascript">
             
             //search button
             //https://www.google.com/search?q=
-            let search_string = document.getElementById('search');
-            function search(){
-                
-                window.open('https://www.google.com/search?q='+search_string.value);
-            }
-            
-            //help function
-          
-            
-            
-            //free sites
-            
-           function free_sites_close(){ document.getElementById('free_sites_container').style.display='none';
-            }
-            
-         document.getElementById('top_arrow_1').onclick=function(){  document.getElementById('free_sites_container').style.display='block';
-         }  
-         
-         function notification_close(){ document.getElementById('notification_container').style.display='none';
-            }
-            
-         document.getElementById('down_arrow_1').onclick=function(){  document.getElementById('notification_container').style.display='block';
-         }         
-         
-         function help(){ document.getElementById('help_container').style.display='block';
-            }
-        function help_close(){ document.getElementById('help_container').style.display='none';
-            }
-            
-       
-            
-        </script>
-    </body>
-
-</html>
+            let search_string = document.get

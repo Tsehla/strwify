@@ -5,7 +5,7 @@
         <style type="text/css">
             body {
                 width: 100vw;
-                height: 100vh;
+                height: auto;
                 margin: 0px;
                 padding: 0px;
                 font-size : 12px;
@@ -25,58 +25,60 @@
         <style>
             #nav_container{
                 width: 100vw;
-                height: 10vh;
+                height: 70px;
                 display: flex;
             
             }
             #nav_container a{
                 width: 20vw;
-                height: 10vh;
+                height: 60px;
                 text-align :center;
-                line-height: 7.5vh;
+                line-height: 45px;
                 font-size: 0.9em;
             }
             #nav_container button{
                 width: 20vw;
-                height: 10vh;
+                height: 60px;
                 text-align :center;
-                line-height: 6.5vh;
-                font-size: 0.9em;
+                line-height: 45px;
+                font-size: 18px;
             }
             
-           {border: 1px solid}
+           {border: 1px solid blue}
         
         </style>
     <!-- search -->
         <div id='navi_container'>
+			<button onclick='window.open("http://street-wify-transcat.herokuapp.com","_self")' class='btn btn-success' style="font-size: 30px">	Buy</button>
             <input type='search' placeholder='Search Google or type URL' class='form-control' id='search'>
-            <button onclick='search()' class='btn btn'>	&#8981;</button>
+            <button onclick='search()' class='btn btn' style="background: rebeccapurple;">	&#8981;</button>
         </div>
         <style>
             #navi_container {
                 width: 100vw;
-                height: 10vh;
+                height: 70px;
+				line-height: 45px;
+				text-align: center;
                 display: flex;
             }
             #navi_container input {
-                width: 70vw;
+                width: 60vw;
                 height: 80%;
                 margin: 2% 2% 2% 4%;
                 text-align: center;
             }
             #navi_container input::placeholder {
-                 font-size: 1.1em;
+                 font-size: 15px;
             
             }
             #navi_container button {
                 width: 20%;
                 height: 98%;
                 margin-top: 1%;
-                background-color: rebeccapurple;
                 color: snow;
                 font-size: 60px;
                 vertical-align: middle;
-                line-height: 1vh;
+                line-height: 45px;
             }
             #navi_container button:active{
                 background-color:black;
@@ -91,7 +93,7 @@
         <style>
             #top_arrow_container{
                 width: 100vw;
-                height: 11vh;
+                height: 80px;
                 margin-top: 4%;
                 margin-top: 4%;
                 text-align: center;
@@ -129,7 +131,7 @@
             <style>
                 #center_arrow_container {
                     width: 100vw;
-                    height: 20vh;
+                    height: 80px;
                     margin: 1vh 0px 0px 0px;
                     padding: 0px;
                     display: flex;
@@ -144,13 +146,13 @@
                 #left_arrow div{
                     height: 100%;
                     vertical-align: middle;
-                    line-height: 18vh;
+                    line-height: 75px;
                 }
                 #left_arrow div:nth-child(1){
                     width:100%;
                     padding: 0px;
                     margin: 0px;
-                    font-size: 4em;
+                    font-size: 60px;
                     color : orange;
                     border: 0px;
                     background-color: transparent;
@@ -167,14 +169,14 @@
                 #right_arrow div{
                     height: 100%;
                     vertical-align: middle;
-                    line-height: 18vh;
+                    line-height: 75px;
                     float: right;
                 }
                 #right_arrow div:nth-child(1){
                     width:100%;
                     padding: 0px;
                     margin: 0px;
-                    font-size: 4em;
+                    font-size:60px;
                     color: orange;
                     border: 0px;
                     background-color: transparent;
@@ -189,7 +191,7 @@
             <style>
                 #down_arrow_container{
                     width: 100vw;
-                    height: 11vh;
+                    height: 80px;
                     margin-top: 1%;
                     text-align: center;
                 
@@ -203,12 +205,13 @@
                     padding: 0px;
                 }
                 #down_arrow_container div:nth-child(1) {
-                    font-size: 4em;
+                    font-size: 60px;
                     height: Calc(100%/1);
                     color : green;
                     border: 0px;
                     background-color: transparent;
                     text-shadow : 2px 2px 1px snow;
+					line-height: 75px;
                 } 
                 
                 
@@ -280,7 +283,7 @@
             #walp_links_container {
                 margin-top: 7vh;
                 width: 100vw;
-                height: 15vh;
+                height:100px;
                 border: 0px;
                 background: rgba(192,192,192,0.2);
                 text-align: center;
@@ -289,7 +292,7 @@
             #walp_links_container p{
                 width: 100%;
                 height: auto;
-                padding: 5vh 1vw 1vh 1vw;
+                padding: 30px 1vw 1vh 1vw;
                 background-color: transparent;
                 color: snow;
                 font-size: 20px;
@@ -317,6 +320,9 @@
                         <li>
                             Enter <i style='color:green'>VOUCHER</i>
                         </li>
+						<li>
+                            Click <i style='color:green'>BUY</i> Button to buy recharge voucher
+                        </li>
                     </ol>
                 </a>
                 <h2>Tips</h2>
@@ -341,7 +347,7 @@
                     </ol>
                 </a>
                 <h2>Voucher</h2>
-                <div style="width: 80vw; height: 30vh; background-image: url(voucher%20template.PNG); background-position: center; background-repeat: no-repeat;background-size: contain"></div>
+                <div style="width: auto; height: 200px; background-image: url(voucher%20template.PNG); background-position: center; background-repeat: no-repeat;background-size: contain"></div>
             </div>
        <Marquee role='marquee'>Help yourself, To be helped</Marquee>
        </div>
@@ -352,7 +358,7 @@
                 top : 3vh;
                 left :7vw;
                 width : 85vw;
-                height : 70vh;
+                height : 500px;
                 background-color : white;
                 box-shadow: 3px 3px 13px blue, -3px -3px 13px blue;
                 overflow-y: auto;
@@ -361,8 +367,8 @@
               
            }
            #help_container h1 {
-                width: 85vw;
-                height: 10vh;
+                width: 85%;
+                height: 10%;
                 margin-top: 0px;
                 text-align: center;
                 font-size: 1.5em;
@@ -375,16 +381,16 @@
            }
            #help_container button {
                 position: absolute;
-                width : 10vw;
-                height: 10vh;
+                width : 15%;
+                height: 10%;
                 top: 0px;
                 right: 0px;
                 padding: 0px;
                 display : inline;
                 float: right;
-                font-size: 1.9em;
+                font-size: 18px;
                 vertical-align: middle;
-                line-height: 1vh;
+                line-height: 5%;
                 border-right: 0px;
            }
              #help {
@@ -423,8 +429,8 @@
           
            #help_container marquee {
                 width: 85vw;
-                height: 10vh;
-                font-size: 2.2em;
+                height: 10%;
+                font-size: 22px;
                 position: static;
           
            }
@@ -457,7 +463,7 @@
                 top : 3vh;
                 left :7vw;
                 width : 85vw;
-                height : 70vh;
+                height : 500px;
                 background-color : white;
                 box-shadow: 3px 3px 13px magenta, -3px -3px 13px magenta;
                 overflow-y: auto;/*hidden scrolling*/
@@ -467,40 +473,40 @@
            }
            #free_sites_container h1 {
                 width: 85vw;
-                height: 10vh;
+                height: 10%;
                 margin-top: 0px;
                 text-align: center;
-                font-size: 1.5em;
+                font-size: 15px;
                 font-weight: 600;
                 border-bottom:1px solid brown;
                 padding : 0px;
                 vertical-align: middle;
-                line-height: 10vh;
+                line-height:50px;
               
            }
            #free_sites_container button {
                 position: absolute;
                 width : 10vw;
-                height: 10vh;
+                height: 10%;
                 top: 0px;
                 right: 0px;
                 padding: 0px;
                 display : inline;
                 float: right;
-                font-size: 1.9em;
+                font-size: 19px;
                 vertical-align: middle;
-                line-height: 1vh;
+                line-height: 1%;
            }
            #education {
                 width: 85vw;
                 height: auto;
-                margin: 3vh 0px 0px 0px;
+                margin: 30px 0px 0px 0px;
                 padding : 0px;
                 border-bottom:1px solid brown;
            }
            #education h2 {
                 width :100;
-                height: 2.5vh;
+                height: 25px;
                 margin: 0px;
                 font-size: 1.4em;
                 padding:0px;
@@ -509,7 +515,7 @@
            }
            #education a {
                 width: 100vw;
-                height: 3vh;
+                height: 30px;
                 margin : 15px 0px 26px 10%;
                 display:block;
                 font-size: 2em;
@@ -530,7 +536,7 @@
            }
            #work h2 {
                 width :100;
-                height: 2.5vh;
+                height: 25px;
                 margin: 0px;
                 font-size: 1.4em;
                 padding:0px;
@@ -539,7 +545,7 @@
            }
            #work a {
                 width: 100vw;
-                height: 3vh;
+                height: 30px;
                 margin : 15px 0px 26px 10%;
                 display:block;
                 font-size: 2em;
@@ -554,7 +560,7 @@
            #free_sites_container marquee {
                 width: 85vw;
                 height: 10vh;
-                font-size: 3em;
+                font-size: 20px;
                 position: static;
           
            }
@@ -579,7 +585,7 @@
                 top : 3vh;
                 left :7vw;
                 width : 85vw;
-                height : 70vh;
+                height : 500px;
                 background-color : white;
                 box-shadow: 3px 3px 13px green, -3px -3px 13px green;
                 overflow-y: auto;
@@ -589,27 +595,27 @@
            }
            #notification_container h1 {
                 width: 85vw;
-                height: 10vh;
+                height: 50px;
                 margin-top: 0px;
                 text-align: center;
-                font-size: 1.5em;
+                font-size: 15px;
                 font-weight: 600;
                 border-bottom:1px solid brown;
                 padding : 0px;
                 vertical-align: middle;
-                line-height: 10vh;
+                line-height: 45px;
               
            }
            #notification_container button {
                 position: absolute;
                 width : 10vw;
-                height: 10vh;
+                height: 50px;
                 top: 0px;
                 right: 0px;
                 padding: 0px;
                 display : inline;
                 float: right;
-                font-size: 1.9em;
+                font-size: 19px;
                 vertical-align: middle;
                 line-height: 1vh;
            }
@@ -625,7 +631,7 @@
                 width :85vw;
                 height: auto;
                 margin: 0px;
-                font-size: 1em;
+                font-size: 10px;
                 padding:0px;
                 text-align: center;
                 border: 1px solid grey;
@@ -634,7 +640,7 @@
            }
            #notification a {
                 width: 100vw;
-                height: 2vh;
+                height:25px;
                 margin : 1vh 0px 4vh 1vw;
                 display:block;
                 font-size: 2em;
@@ -649,8 +655,8 @@
           
            #notification_container marquee {
                 width: 85vw;
-                height: 10vh;
-                font-size: 2.2em;
+                height: 40px;
+                font-size: 22px;
                 position: static;
           
            }

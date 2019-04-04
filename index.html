@@ -5,7 +5,8 @@
         <style type="text/css">
             body {
                 width: 100vw;
-                height: auto;
+				min-height: 568px;
+                max-height: auto;
                 margin: 0px;
                 padding: 0px;
                 font-size : 12px;
@@ -18,9 +19,9 @@
     <body id='page_body'>
     <!-- navi -->
         <div id='nav_container'> <!-- chnage href with you link -->
-            <a href='http://streetwifiy.co.za/status' class='btn btn-primary' role='button' style='margin-left: 20vw; border-bottom-right-radius:0px;border-top-right-radius:0px; '>Balance</a>
+            <a href='#' onclick='balance()' class='btn btn-primary' role='button' style='margin-left: 20vw; border-bottom-right-radius:0px;border-top-right-radius:0px; '>Balance</a>
             <button class='btn btn-info' style='border-bottom-right-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-top-left-radius:0px' onclick='help()'>HELP</button>
-            <a href='http://streetwifiy.co.za/logout' class='btn btn-primary' role='button' style='border-bottom-left-radius:0px;border-top-left-radius:0px'>LogOut</a>
+            <a href='#' onclick='logout()' class='btn btn-primary' role='button' style='border-bottom-left-radius:0px;border-top-left-radius:0px'>LogOut</a>
         </div>
         <style>
             #nav_container{
@@ -731,6 +732,16 @@
 			function buy(){//buy button
                
 				window.open("http://street-wify-transcat.herokuapp.com");
+            }
+			function balance(){//balance button
+               
+				window.open("http://streetwifiy.co.za/status", "_self");
+				
+            }
+			function logout(){//log out button
+               
+				window.open("http://streetwifiy.co.za/logout", "_self");
+				
             }
             
             //help function
